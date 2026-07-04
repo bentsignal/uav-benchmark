@@ -1,0 +1,244 @@
+:root {
+  color: #17130f;
+  background: #f4f0e8;
+  font-family:
+    Avenir Next, Gill Sans, Trebuchet MS, system-ui, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+button {
+  font: inherit;
+}
+
+.shell {
+  width: min(1120px, calc(100% - 32px));
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 48px 0;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 32px;
+  align-items: end;
+  min-height: 44vh;
+  padding: 40px 0 32px;
+}
+
+.heroCopy {
+  max-width: 720px;
+}
+
+.eyebrow,
+.sectionLabel,
+.signalLabel,
+small {
+  margin: 0;
+  color: #716658;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+.lede {
+  margin: 0;
+}
+
+h1 {
+  max-width: 10ch;
+  color: #17130f;
+  font-family: Georgia, Cambria, serif;
+  font-size: clamp(4.5rem, 18vw, 11rem);
+  font-weight: 700;
+  line-height: 0.82;
+}
+
+h2 {
+  color: #201a14;
+  font-family: Georgia, Cambria, serif;
+  font-size: 1.55rem;
+  line-height: 1.05;
+}
+
+.lede {
+  max-width: 560px;
+  margin-top: 24px;
+  color: #4d453c;
+  font-size: 1.18rem;
+  line-height: 1.55;
+}
+
+.signalPanel,
+.panel {
+  border: 1px solid #292018;
+  background: #fffaf1;
+  box-shadow: 8px 8px 0 #292018;
+}
+
+.signalPanel {
+  display: grid;
+  gap: 16px;
+  padding: 24px;
+}
+
+.signalPanel strong {
+  color: #df4f2f;
+  font-family: Georgia, Cambria, serif;
+  font-size: 4rem;
+  line-height: 0.9;
+}
+
+.meter {
+  height: 12px;
+  overflow: hidden;
+  border: 1px solid #292018;
+  background: #e4dccf;
+}
+
+.meter span {
+  display: block;
+  height: 100%;
+  background: #2e8376;
+  transition: width 180ms ease;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.panel {
+  display: grid;
+  align-content: start;
+  gap: 28px;
+  min-height: 320px;
+  padding: 28px;
+}
+
+.checklist ul {
+  display: grid;
+  gap: 14px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.checklist li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: center;
+}
+
+.checklist button,
+.commandGrid button {
+  min-height: 48px;
+  border: 1px solid #292018;
+  color: #211911;
+  background: #f4f0e8;
+  cursor: pointer;
+  transition:
+    transform 160ms ease,
+    background 160ms ease,
+    color 160ms ease;
+}
+
+.checklist button {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 14px;
+  text-align: left;
+}
+
+.checklist button:hover,
+.commandGrid button:hover {
+  transform: translate(-2px, -2px);
+}
+
+.checklist button span {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  border: 1px solid #292018;
+  background: #fffaf1;
+}
+
+.checklist button.checked {
+  background: #e0f0e7;
+}
+
+.checklist button.checked span {
+  background: #2e8376;
+}
+
+.commandPanel {
+  background: #201a14;
+}
+
+.commandPanel h2 {
+  color: #fffaf1;
+  overflow-wrap: anywhere;
+}
+
+.commandPanel .sectionLabel {
+  color: #d7c8af;
+}
+
+.commandGrid {
+  display: grid;
+  gap: 10px;
+}
+
+.commandGrid button {
+  padding: 12px;
+  color: #fffaf1;
+  background: transparent;
+  text-align: left;
+}
+
+.commandGrid button.active {
+  color: #17130f;
+  background: #f7c85f;
+}
+
+@media (max-width: 780px) {
+  .shell {
+    width: min(100% - 24px, 560px);
+    padding: 24px 0;
+  }
+
+  .hero,
+  .board {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 16px;
+  }
+
+  .checklist li {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+}
