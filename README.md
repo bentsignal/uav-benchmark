@@ -20,3 +20,8 @@ and project-local skill files.
 4. Start a fresh external agent and ask it to work every open UAV task to
    completion.
 5. Evaluate both the agent behavior and the UAV workflow affordances.
+
+## Results
+
+- Summary scoreboard: `RESULTS.md`
+- Per-run details: `run-details/`
